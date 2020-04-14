@@ -39,7 +39,7 @@ double* square_upper(double *A, int N) {
 		}
 	}
 
-    return res;
+	return res;
 }
 
 /* Multiplies matrices A and B of size N
@@ -61,7 +61,7 @@ double* matrix_multiply(double *A, double* B, int N, char is_upper) {
 		}
 	}
 
-    return res;
+	return res;
 }
 
 /* Adds A and B of size N.
@@ -102,6 +102,6 @@ double* my_solver(int N, double *A, double* B) {
 	free(A_squared);
 	free(first);
 	free(second);
-	
+
 	return res;
 }

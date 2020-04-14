@@ -64,24 +64,24 @@ double* matrix_multiply(double *A, double* B, int N, char is_upper) {
 	register double *res;
 	register double *prodA;
 	register double *prodB;
-    register double *ptrRes;
+	register double *ptrRes;
 
 	res = malloc(N * N * sizeof(*res));
 
-    prodA = A;
+	prodA = A;
 	for (i = 0; i < N; ++i) {
-        prodA = is_upper ? prodA + i : prodA;
-        prodB = is_upper ? B + i * N : B;
+		prodA = is_upper ? prodA + i : prodA;
+		prodB = is_upper ? B + i * N : B;
 
 		for (k = is_upper ? i : 0; k < N; ++k) {
-            ptrRes = res + i * N;
+			ptrRes = res + i * N;
 
 			for (j = 0; j < N; ++j) {
 				*ptrRes += *prodA * *prodB;
-                ++ptrRes;
-                ++prodB;
+				++ptrRes;
+				++prodB;
 			}
-            ++prodA;
+			++prodA;
 		}
 	}
 
@@ -97,25 +97,25 @@ double* matrix_multiply_lw(double *A, double* B, int N) {
 	register double *res;
 	register double *prodA;
 	register double *prodB;
-    register double *ptrRes;
+	register double *ptrRes;
 
 	res = malloc(N * N * sizeof(*res));
 
-    prodA = A;
+	prodA = A;
 	for (i = 0; i < N; ++i) {
-        prodA = prodA;
-        prodB = B;
+		prodA = prodA;
+		prodB = B;
 
 		for (k = 0; k < N; ++k) {
 			prodB = B + k * N;
-            ptrRes = res + i * N;
+			ptrRes = res + i * N;
 
 			for (j = 0; j <= k; ++j) {
 				*ptrRes += *prodA * *prodB;
-                ++ptrRes;
-                ++prodB;
+				++ptrRes;
+				++prodB;
 			}
-            ++prodA;
+			++prodA;
 		}
 	}
 
@@ -168,6 +168,6 @@ double* my_solver(int N, double *A, double* B) {
 	free(A_squared);
 	free(first);
 	free(second);
-	
+
 	return res;
 }

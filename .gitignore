@@ -1,0 +1,7 @@
+core.*
+out*
+sc.sh.*
+*.out
+tema2_*
+compare
+.vs*

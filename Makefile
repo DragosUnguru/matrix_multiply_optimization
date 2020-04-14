@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall -Werror -O0
 OPT_CFLAGS=-Wall -Werror -O3
-EXTRA_OPT_CFLAGS=-funsafe-loop-optimizations -funsafe-math-optimizations -fno-math-errno -ffinite-math-only -fno-rounding-math -fno-signaling-nans -fcx-limited-range -fno-signaling-nans -fno-trapping-math -frerun-cse-after-loop -fweb -frename-registers -funroll-loops
+EXTRA_OPT_CFLAGS=-funsafe-loop-optimizations -funsafe-math-optimizations -fno-math-errno -ffinite-math-only -fno-rounding-math -fno-signaling-nans -fno-signaling-nans -fno-trapping-math -frename-registers -fcx-limited-range -frerun-cse-after-loop -fweb -funroll-loops
 LIBDIRS=-L/usr/lib64/atlas/ -I/usr/lib64/atlas/
 LIBS=-l:libsatlas.so.3.10
 

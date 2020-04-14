@@ -33,9 +33,9 @@ double* square_upper(double *A, int N) {
 
 	for (i = 0; i < N; i++) {
 		for (j = i; j < N; j++) {
-
-			for (k = 0; k <= j; k++)
+			for (k = 0; k <= j; k++) {
 				res[i * N + j] += A[i * N + k] * A[k * N + j];
+			}
 		}
 	}
 
